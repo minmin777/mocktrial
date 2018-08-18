@@ -4,14 +4,14 @@
 {% static "" as baseUrl %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
 <div id="profiles">
-{% for team in teams %}
-    {% if forloop.first %}<div class="row" id="row1">{% endif %}
+{% for team in teams %} <!-- in views.py there's a variable teams that has all the results from the query. teams is a list of TeamMembers objects which has photo, name, description, linkedin. You can see it in models.py -->
+    {% if forloop.first %}<div class="row" id="row1">{% endif %} <!-- if loopcount is 1 -->
     <div class="col-xs-6">
     	<div class="row">
-    		<img style="position: relative;width: 204px;height: 252px;" src="{{ baseUrl }}media/{{team.photo}}">
+    		<img style="position: relative;width: 204px;height: 252px;" src="{{ baseUrl }}media/{{team.photo}}"> <!-- when someone uploads their photo is goes into the static folder ./media/ and {{team.photo}} is the TeamMember object and getting the photo from the query -->
     		<div style="left: 221px;width: 260px;position: absolute;top: 0px;">
     			<h6>{{team.name}}</h6>
-    			{% if team.linkedin %}
+    			{% if team.linkedin %} <!-- since having a linkedin is optional if there is a url then add the linkedin logo with the url -->
     			<p><a target="_blank" href="{{ team.linkedin }}"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
     			{% endif %}
     			<p>{{team.description | striptags}}</p>
@@ -19,7 +19,7 @@
     	</div>
             
         </div>
-    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
+    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %} <!-- if the number of loops done is divisible by 3 then it creates a new row-->
     {% if forloop.last %}</div>{% endif %}
 {% endfor %}
 </div>
