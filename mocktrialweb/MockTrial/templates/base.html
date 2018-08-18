@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title> Mock Trial </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{%static '/css/base.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div style="
+    left: 250px;
+    position: absolute;
+    top: 14px;
+    width: 91px;
+    height: 70px;">
+          <a href="/">
+          <img style="width: 91px; height: 70px;" src="{% static 'cropped-cropped-mocklogo_final1.png' %}"></a>
+        </div>
+        
+          <div id="banner" style="left: 353px;
+    width: 675px;
+    position: absolute;
+    min-height: 49px;
+    top: 26px;">
+            <h1 style="text-align: center;"><a href="/">Haverford College Mock Trial </a></h1>
+          </div>
+          
+        <!--<p id="site-title">Haverford College Mock Trial </p>-->
+      </div>
+      <section style="
+
+    min-width: 980px;
+    position: absolute;
+    margin-left: 0px;
+    top: 104px;
+    height: 34px;
+    left: 0px;
+    width: 100%;">
+              <div>
+        <nav class="navbar navbar-inverse center">
+          <div class="container-fluid navbar-inner">
+    <ul class="nav navbar-nav">
+      <li><a class="active" href="/">Home</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a  href="#contact">Invitationals</a></li>
+        <li><a  href="#about">Contact</a></li>
+    </ul>
+  </div>
+        
+        </nav>
+      </div>
+      </section>
+
+      
+
+      <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'about' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Team</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Invitationals</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#schedule">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>-->
+    </header>
+</div>
+<div class="container">
+	{% block content %}{% endblock %} <!-- the block content from the other html files -->
+</div>
+
+{% block footer %}{% endblock %} <!-- where the footer is from footer.html -->
+<script type="text/javascript">
+  $(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+
+});
+
+
+</script>
+</body>
+</html>

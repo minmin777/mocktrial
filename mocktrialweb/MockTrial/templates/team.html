@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% static "" as baseUrl %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
+<div id="profiles">
+{% for team in teams %}
+    {% if forloop.first %}<div class="row" id="row1">{% endif %}
+    <div class="col-xs-6">
+    	<div class="row">
+    		<img style="position: relative;width: 204px;height: 252px;" src="{{ baseUrl }}media/{{team.photo}}">
+    		<div style="left: 221px;width: 260px;position: absolute;top: 0px;">
+    			<h6>{{team.name}}</h6>
+    			{% if team.linkedin %}
+    			<p><a target="_blank" href="{{ team.linkedin }}"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
+    			{% endif %}
+    			<p>{{team.description | striptags}}</p>
+    		</div>
+    	</div>
+            
+        </div>
+    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
+    {% if forloop.last %}</div>{% endif %}
+{% endfor %}
+</div>
+{% endblock %}
