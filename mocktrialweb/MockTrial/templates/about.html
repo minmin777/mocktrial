@@ -2,38 +2,27 @@
 {% load static %}
 {% block content %}
 <style type="text/css">
-	.carousel-inner img {
-  margin: 0 auto;
-  width: 100%;
-  position: center;
-  height: 100px;
-}
+	#about{
+		/*display: inline-block;
+		left: 300px;
+		width: 500px;
+		font-family: "Times New Roman", Times, serif;
+		text-align: center;*/
+		left: 200px;
+		right: 200px;
+    width: 849px;
+    position: absolute;
+    min-height: 318px;
+    text-align: justify;
+	}
 </style>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <!--<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-      <img class="d-block w-100" src="{% static 'Haverfordfounders.jpg'%}" alt="First slide">
-    </div>
 
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<div class="boxed" id="about">
+	{% if ab %}
+ {{ ab | striptags | linebreaks }}
+{% endif %}
 </div>
 
-{% if ab %}
- {{ ab | striptags }}
-{% endif %}
 
 {% endblock %}
  

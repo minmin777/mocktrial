@@ -6,8 +6,11 @@ class AboutAdmin(admin.ModelAdmin):
 
 class TeamMembersAdmin(admin.ModelAdmin):
 	"""docstring for TeamMemberAdmin"""
-	pass
+	field = ('name')
 		
+class ContactAdmin(admin.ModelAdmin):
+	pass
 admin.site.register(About, AboutAdmin)
 admin.site.register(TeamMembers, TeamMembersAdmin)
+admin.site.register(Contact, ContactAdmin)
 # Register your models here.

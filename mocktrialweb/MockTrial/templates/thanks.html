@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load widget_tweaks %}
+<style type="text/css">
+	#about{
+		/*display: inline-block;
+		left: 300px;
+		width: 500px;
+		font-family: "Times New Roman", Times, serif;
+		text-align: center;*/
+		left: 200px;
+		right: 200px;
+    width: 849px;
+    position: absolute;
+    min-height: 318px;
+    text-align: justify;
+	}
+</style>
+
+<div id="about">
+	{{info.about | striptags | linebreaks}}
+	<p>As a rapidly growing and expanding organization, we are actively recruiting for the next mock trial season. All interested bi-co students should see the below information about our fall recruitment events. Fill out the form below if you are interested or have questions!</p>
+	<h2>Thank you! We will contact you!</h2>
+</div>
+
+{% endblock %}
