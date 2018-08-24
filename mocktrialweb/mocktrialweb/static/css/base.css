@@ -5,7 +5,9 @@ div nav {
     background-color: white;
 
 }
-
+.dropdown:hover >.dropdown-menu {
+  display: block;
+}
 .navbar.center .navbar-inner {
     text-align: center;
 

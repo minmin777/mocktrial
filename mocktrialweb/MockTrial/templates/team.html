@@ -20,13 +20,13 @@
     	<div class="row" style="width: 450px;">
     		<img class="img-circle" style="position: relative;width: 300px;height: 300px;" src="{{ baseUrl }}media/{{team.photo}}"> <!-- when someone uploads their photo is goes into the static folder ./media/ and {{team.photo}} is the TeamMember object and getting the photo from the query -->
     		<div style="left: 260px;width: 260px; height: 100%;">
-    			<h5>{{team.name}}</h5>
-    			<h5>Class of {{team.classnum}}</h5>
-    			<h5>Major: {{team.major}}</h5>
+    			<h5>{{team.name | safe}}</h5>
+    			<h5>Class of {{team.classnum | safe}}</h5>
+    			<h5>Major: {{team.major | safe}}</h5>
     			{% if team.linkedin %} <!-- since having a linkedin is optional if there is a url then add the linkedin logo with the url -->
     			<p><a target="_blank" href="{{ team.linkedin }}"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></p>
     			{% endif %}
-    			<p style="text-align: center;"> {{team.description | striptags}}</p>
+    			<p style="text-align: center;"> {{team.description | safe}}</p>
     		</div>
     	</div>
             

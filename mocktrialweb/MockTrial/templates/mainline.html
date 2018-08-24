@@ -20,7 +20,6 @@
 
 <div id="about">
 	{{info.about | safe}}
-	<p>As a rapidly growing and expanding organization, we are actively recruiting for the next mock trial season. All interested bi-co students should see the below information about our fall recruitment events. Fill out the form below if you are interested or have questions!</p>
 	<form class="form-horizontal" role="form" action="." method="post">
         {% csrf_token %}
             {% for field in form %}

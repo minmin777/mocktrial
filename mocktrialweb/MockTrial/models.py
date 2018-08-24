@@ -31,4 +31,14 @@ class TeamMembers(models.Model):
 
 	def __unicode__(self):
 		return self.name; 
+
+class Invitational(models.Model):
+	about = RichTextField()
+	def __str__(self):
+		return "Invitational"
+
+class MainLine(models.Model):
+	about = RichTextField()
+	def __str__(self):
+		return "MainLine"
 # Create your models here.

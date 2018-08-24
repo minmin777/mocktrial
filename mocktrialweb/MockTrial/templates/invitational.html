@@ -17,10 +17,15 @@
     text-align: justify;
 	}
 </style>
-
+<div class="col-md" id="headphotos">
+	<img style="width: 33%; height: 310px;padding: 0px;" src="{% static 'team4.jpg' %}">
+	<img style="width: 33%;height: 310px;padding: 0px;" src="{% static 'team5.jpg' %}">
+	<img style="width: 33%;height: 310px;padding: 0px;" src="{% static 'team6.jpg' %}">
+</div>
+<br>
 <div id="about">
-	{{info.about | safe}}
-	<p>As a rapidly growing and expanding organization, we are actively recruiting for the next mock trial season. All interested bi-co students should see the below information about our fall recruitment events. Fill out the form below if you are interested or have questions!</p>
+	<!-- striptags | linebreaks -->
+	{{info.about | safe }}
 	<form class="form-horizontal" role="form" action="." method="post">
         {% csrf_token %}
             {% for field in form %}
