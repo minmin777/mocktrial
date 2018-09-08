@@ -6,7 +6,8 @@ class AboutAdmin(admin.ModelAdmin):
 
 class TeamMembersAdmin(admin.ModelAdmin):
 	"""docstring for TeamMemberAdmin"""
-	field = ('name')
+	model = TeamMembers
+	list_display = ["name",]
 		
 class ContactAdmin(admin.ModelAdmin):
 	pass

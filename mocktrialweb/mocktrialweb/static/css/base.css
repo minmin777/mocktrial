@@ -5,6 +5,22 @@ div nav {
     background-color: white;
 
 }
+
+.row #first{
+    left: 250px;
+    position: absolute;
+    top: 14px;
+    width: 91px;
+    height: 70px;
+}
+
+.row #banner{
+    left: 353px;
+    width: 675px;
+    position: absolute;
+    min-height: 49px;
+    top: 26px;
+}
 .dropdown:hover >.dropdown-menu {
   display: block;
 }
@@ -59,4 +75,37 @@ a {
     outline: 0;
     vertical-align: baseline;
     background: 0 0;
+}
+
+@media (max-width: 992px) {
+    .container{ max-width: 800px;}
+header{ max-width: 800px;} 
+    #id{
+        left: 0px;
+    }
+        .navbar-header {
+        float: none;
+        max-width: 800px;
+    }
+    section{
+        max-width:900px;
+    }
+    .row #first{
+        left:0px;
+    position: absolute;
+    top: 14px;
+    width: 91px;
+    height: 70px;
+}
+    .row #banner{
+        left:-110px;
+    width: 675px;
+    position: absolute;
+    min-height: 49px;
+    top: 26px;
+}
+    .row #banner h1{
+        font-size: 20px;
+    }
+    
 }

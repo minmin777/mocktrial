@@ -6,7 +6,7 @@
 <title> Mock Trial </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="{%static '/css/base.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -15,21 +15,12 @@
   <div class="container">
     <header>
       <div class="row">
-        <div style="
-    left: 250px;
-    position: absolute;
-    top: 14px;
-    width: 91px;
-    height: 70px;">
+        <div id="first">
           <a href="/">
           <img style="width: 91px; height: 70px;" src="{% static 'cropped-cropped-mocklogo_final1.png' %}"></a>
         </div>
         
-          <div id="banner" style="left: 353px;
-    width: 675px;
-    position: absolute;
-    min-height: 49px;
-    top: 26px;">
+          <div id="banner">
             <h1 style="text-align: center;"><a href="/">Haverford College Mock Trial </a></h1>
           </div>
           
@@ -37,7 +28,7 @@
       </div>
       <section style="
 
-    min-width: 980px;
+    
     position: absolute;
     margin-left: 0px;
     top: 104px;
@@ -45,7 +36,34 @@
     left: 0px;
     width: 100%;">
               <div>
-        <nav class="navbar navbar-inverse center">
+        <nav class="navbar navbar-inverse center navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-nav navbar-right" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="scrollable" href="/about">About</a></li>
+        <li><a class="scrollable"href="/team">Team</a></li>
+        <li class="dropdown"><a class="scrollable nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Invitationals</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="scrollable dropdown-item" href="/invitational">Black Squirrel Invitational</a>
+          <a class="scrollable dropdown-item" href="/mainline">Main Line Invitational</a>
+        </div>
+        </li>
+        <li><a class="scrollable" href="/contact">Contact</a></li>
+          
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+        <!--<nav class="navbar navbar-inverse center">
           <div class="container-fluid navbar-inner">
     <ul class="nav navbar-nav">
       <li><a href="/about">About</a></li>
@@ -60,7 +78,7 @@
     </ul>
   </div>
         
-        </nav>
+        </nav>-->
       </div>
       </section>
 

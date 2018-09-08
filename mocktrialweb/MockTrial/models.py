@@ -24,9 +24,9 @@ class FAQ(models.Model):
 class TeamMembers(models.Model):
 	photo = models.ImageField(upload_to='photos/')
 	name = models.CharField(max_length=30)
-	classnum = models.CharField(max_length=100)
+	classnum = models.CharField(max_length=100, blank=True, null=True)
 	major = models.CharField(max_length=100)
-	description = RichTextField()
+	description = RichTextField(blank=True, null=True)
 	linkedin = models.URLField(blank=True, null=True)
 
 	def __unicode__(self):
