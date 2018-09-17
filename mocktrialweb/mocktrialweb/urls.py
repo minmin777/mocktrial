@@ -20,12 +20,4 @@ from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'), 
-    path('team/', views.team, name='team'),
-    path('contact/', views.contact, name='contact'),
-    path('thanks/', views.thanks, name='thanks'),
-    path('invitational/', views.invitational, name='invitational'),
-    path('mainline/', views.mainline, name='mainline')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

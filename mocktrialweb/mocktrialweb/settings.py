@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django_cleanup',
     'widget_tweaks',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+        },
+    },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'environment': 'MockTrial.jinja2.environment'
         },
     },
 ]
@@ -158,3 +167,8 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/static/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(BASE_DIR, 'scss'),
+]
+

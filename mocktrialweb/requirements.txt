@@ -6,3 +6,5 @@ django-richtextfield==1.2.1
 django-widget-tweaks==1.4.2
 Pillow==5.1.0
 pytz==2018.4
+django-sass-processor==0.7
+
